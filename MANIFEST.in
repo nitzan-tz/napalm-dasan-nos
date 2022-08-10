@@ -1,3 +1,3 @@
 include requirements.txt
-include napalm_dasan_nos/templates/*.j2
-include napalm_dasan_nos/utils/textfsm_templates/*.tpl
+include napalm_dasan_nos/templates/*
+include napalm_dasan_nos/utils/textfsm_templates/*
