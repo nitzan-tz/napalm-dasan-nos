@@ -1,0 +1,9 @@
+Value Required POWER_NAME ([A-Z])
+Value Required POWER_STATE (\S+)
+Value POWER_MODE (\S+)
+Value POWER_STATUS (\S+)
+
+Start
+  ^Power ${POWER_NAME}\s+:\s+${POWER_STATE}
+  ^\s+mode\s+:\s+${POWER_MODE}
+  ^\s+status\s+:\s+$POWER_STATUS -> Record

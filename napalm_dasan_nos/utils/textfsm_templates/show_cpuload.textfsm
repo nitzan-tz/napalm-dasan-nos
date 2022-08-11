@@ -1,0 +1,8 @@
+Value Required CPU_AVERAGE_5SEC ([0-9]+\.?[0-9]*)
+Value Required CPU_AVERAGE_1MIN ([0-9]+\.?[0-9]*)
+Value Required CPU_AVERAGE_10MIN ([0-9]+\.?[0-9]*)
+
+Start
+  ^\s*5 sec:\s+${CPU_AVERAGE_5SEC}\(
+  ^\s*1 min:\s+${CPU_AVERAGE_1MIN}\(
+  ^\s*10 min:\s+${CPU_AVERAGE_10MIN}\( -> Record

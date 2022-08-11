@@ -1,7 +1,5 @@
 """setup.py file."""
 
-import uuid
-
 from setuptools import setup, find_packages
 
 __author__ = 'Warren Ashcroft <warren.ashcroft@4thu.co.uk>'

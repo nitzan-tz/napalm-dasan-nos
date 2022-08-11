@@ -1,6 +1,5 @@
-Value Required SERIAL_NUMBER (\S+)
-Value OS_VERSION (\S+)
+Value Required VERSION (\d+\.\d+(?:\.\d+)?)
+Value Required BUILD (\d+)
 
 Start
-  ^\s+Serial Number\s+:\s+${SERIAL_NUMBER}
-  ^\s+Operation Code Version\s+:\s+${OS_VERSION}
+  ^NOS version ${VERSION} #${BUILD}

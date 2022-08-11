@@ -11,24 +11,13 @@
 #
 Template, Hostname, Platform, Command
 
-ping.textfsm, .*, .*, ping.*
-show_arp.textfsm, .*, .*, show arp
-show_interfaces_counters.textfsm, .*, cisco_ios, show interfaces counters
-show_interfaces_brief.textfsm, .*, .*, show interfaces brief
-show_ip_interface_brief.textfsm, .*, .*, show ip interface brief
-show_ip_route.textfsm, .*, .*, show ip route
-show_ipv6_interface_brief.textfsm, .*, .*, show ipv6 interface brief
-show_ipv6_neighbors.textfsm, .*, .*, show ipv6 neighbors
-show_ipv6_route.textfsm, .*, .*, show ipv6 route
-show_lldp_neighbor_interface.textfsm, .*, .*, show lldp neighbor.+
-show_lldp_neighbor.textfsm, .*, .*, show lldp neighbor
-show_memory.textfsm, .*, .*, show memory
-show_ntp.textfsm, .*, .*, show ntp
-show_snmp_server_engine_id.textfsm, .*, .*, show snmp-server engineID
-show_snmp_server.textfsm, .*, .*, show snmp-server
 show_system.textfsm, .*, .*, show system
-show_transceiver.textfsm, .*, .*, show transceiver
-show_users.textfsm, .*, .*, show users
 show_version.textfsm, .*, .*, show version
-show_vlan_all.textfsm, .*, .*, show vlan all
-traceroute.textfsm, .*, .*, traceroute.*
+show_hostname.textfsm, .*, .*, show running-config hostname
+show_uptime.textfsm, .*, .*, show uptime
+show_cpuload.textfsm, .*, .*, show cpuload
+show_memory.textfsm, .*, .*, show memory
+show_status_temp.textfsm, .*, .*, show status temp
+show_status_fan.textfsm, .*, .*, show status fan
+show_status_power.textfsm, .*, .*, show status power
+show_ip_interface_brief.textfsm, .*, .*, show ip interface brief

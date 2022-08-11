@@ -1,7 +1,8 @@
-Value Required INTERFACE ([a-zA-Z]+(\s+\d+)?)
-Value Required IP (\d+\.\d+\.\d+\.\d+)
-Value Required NETMASK (\d+\.\d+\.\d+\.\d+)
+Value Required INTERFACE ([a-zA-Z][a-zA-Z0-9]+)
+Value STATUS (up|down)
+Value PROTOCOL (\S+)
+Value PRIMARY_IP (\d+\.\d+\.\d+\.\d+)
+Value SECONDARY_IP (\d+\.\d+\.\d+\.\d+)
 
 Start
-  ^${INTERFACE}
-  ^\s+IP Address:\s+${IP}\s+Mask:\s+${NETMASK} -> Continue.Record
+  ^${INTERFACE}\s+${STATUS}\s+${PROTOCOL}\s+?\s+${PRIMARY_IP}?\s+${SECONDARY_IP}? -> Record

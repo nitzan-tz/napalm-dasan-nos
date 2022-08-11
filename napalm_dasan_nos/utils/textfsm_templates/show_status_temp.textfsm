@@ -1,0 +1,8 @@
+Value Required TEMP_NAME (\d+)
+Value Required TEMP_VALUE (\d+)
+Value Required TEMP_THRESHOLD_HIGH (\d+)
+Value Required TEMP_THRESHOLD_LOW (-?\d+)
+
+Start
+  ^Temperature ${TEMP_NAME} current\s+:\s+${TEMP_VALUE} C
+  ^Temperature threshold\s+:\s+High \(${TEMP_THRESHOLD_HIGH} C\) Low \(${TEMP_THRESHOLD_LOW} C\) -> Record

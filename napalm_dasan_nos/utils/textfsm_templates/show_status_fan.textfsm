@@ -1,0 +1,9 @@
+Value Filldown FAN_NAME ([A-Z])
+Value Required FAN_INDEX (\d)
+Value Required FAN_STATUS (\S+)
+Value Fillup FAN_OPERATION (\S+)
+
+Start
+  ^Fan ${FAN_NAME}\s+:\s+
+  ^Fan [A-Z]-${FAN_INDEX} is ${FAN_STATUS} -> Record
+  ^Fan operation\s+:\s+${FAN_OPERATION} -> Clear

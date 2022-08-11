@@ -1,12 +1,20 @@
-Value Required UPTIME (.*)
-Value HOSTNAME (\S+)
-Value List SYSTEM_TEMP_UNIT (\d+)
-Value List SYSTEM_TEMP_VALUE (\d+)
-Value List SYSTEM_POWER_UNIT (\d+)
-Value List SYSTEM_POWER_VALUE (Up|Down)
+Value Required MODEL (.+)
+Value SERIAL (.+)
+Value HW_REVISION (.+)
+Value MAIN_MEMORY (\d+)
+Value FLASH_MEMORY (\d+)
+Value HW_ADDRESS (([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2}))
+Value SW_VERSION (\d+\.\d+(?:\.\d+)?)
+Value BL_VERSION (\d+\.\d+(?:\.\d+)?)
+Value PLD_VERSION (.+)
 
 Start
-  ^\s+System Up Time\s+:\s+${UPTIME}
-  ^\s+System Name\s+:\s+${HOSTNAME}
-  ^unit\s+${SYSTEM_TEMP_UNIT}\s+\S+\s+\d+:\s+${SYSTEM_TEMP_VALUE}
-  ^\s+Unit\s+${SYSTEM_POWER_UNIT}\s+Main Power Status\s+:\s+${SYSTEM_POWER_VALUE}
+  ^\s+Model Name\s+:\s+${MODEL}
+  ^\s+Main Memory Size\s+:\s+${MAIN_MEMORY} MB
+  ^\s+Flash Memory Size\s+:\s+${FLASH_MEMORY} MB
+  ^\s+H/W Revision\s+:\s+${HW_REVISION}
+  ^\s+H/W Address\s+:\s+${HW_ADDRESS}
+  ^\s+Serial Number\s+:\s+${SERIAL}
+  ^\s+NOS Version\s+:\s+${SW_VERSION}
+  ^\s+B/L Version\s+:\s+${BL_VERSION}
+  ^\s+PLD Version\s+:\s+${PLD_VERSION}

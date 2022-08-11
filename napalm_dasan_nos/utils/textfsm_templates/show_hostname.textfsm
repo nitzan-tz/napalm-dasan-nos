@@ -1,0 +1,4 @@
+Value Required HOSTNAME (.+)
+
+Start
+  ^hostname\s+${HOSTNAME}

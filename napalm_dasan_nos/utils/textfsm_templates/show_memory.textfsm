@@ -1,6 +1,9 @@
-Value Required MEM_TOTAL (\S+)
-Value MEM_USED (\S+)
+Value Required MEM_TOTAL (\d+)
+Value MEM_USED (\d+)
+Value MEM_FREE (\d+)
+Value MEM_SHARED (\d+)
+Value MEM_BUFFERS (\d+)
+Value MEM_CACHED (\d+)
 
 Start
-  ^\s+Total  Memory:\s+${MEM_TOTAL}
-  ^\s+Used  Memory:\s+${MEM_USED}
+  ^Mem:\s+${MEM_TOTAL}\s+${MEM_USED}\s+${MEM_FREE}\s+${MEM_SHARED}\s+${MEM_BUFFERS}\s+${MEM_CACHED}
