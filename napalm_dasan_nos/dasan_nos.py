@@ -90,6 +90,9 @@ class DasanNOSDriver(NetworkDriver):
         """Wrapper for self.device.send.command().
         If command is a list will iterate through commands until valid command.
         """
+        current_prompt = self.device.find_prompt().strip()
+        terminating_char = current_prompt[-1]
+        pattern = r"[>#{}]\s*$".format(terminating_char) 
         try:
             output = ""
             if isinstance(command, list):
@@ -100,7 +103,7 @@ class DasanNOSDriver(NetworkDriver):
                     if "% Invalid" not in output:
                         break
             else:
-                output = self.device.send_command(command, use_textfsm=use_textfsm)
+                output = self.device.send_command(command, use_textfsm=use_textfsm,expect_string=pattern)
                 if not use_textfsm:
                     output = output.strip()
 
